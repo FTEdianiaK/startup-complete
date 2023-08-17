@@ -33,7 +33,7 @@
 ### Credits
 **Libraries used in code:**
 - [subprocess, platform - from Python Standard Library - PSF](https://docs.python.org/3/library/index.html)
-- [alive-progress - by Rogério Sampaio de Almeida - MIT]()
+- [alive-progress - by Rogério Sampaio de Almeida - MIT](https://pypi.org/project/alive-progress/)
 
 **Other used libraries:**
 - [pyinstaller - by Hartmut Goebel, Giovanni Bajo, David Vierra, David Cortesi, Martin Zibricky - GPLv2](https://pypi.org/project/pyinstaller/)
