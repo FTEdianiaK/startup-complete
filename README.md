@@ -4,6 +4,8 @@
 
 ![Software screenshot](APP.png)
 
+[Full Changelog](https://github.com/FTEdianiaK/startup-complete/compare/v1.0...v1.1) | [License](https://github.com/FTEdianiaK/startup-complete/blob/main/LICENSE)
+
 ### Features
 - A simple command line tool that lets you know when your CPU load has been below the pre-set percentage for the pre-set amount of time.
 - The app shows the name of your computer in the opening message.
