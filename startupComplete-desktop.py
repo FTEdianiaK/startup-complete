@@ -54,7 +54,7 @@ def get_load() -> int:
 
 def show_load():
     _idle_time = 0
-    with alive_bar(IDLE_TIME, theme="classic") as bar:
+    with alive_bar(IDLE_TIME) as bar:
         while _idle_time < IDLE_TIME:
             _load = get_load()
             if _load == "NoValueError":
