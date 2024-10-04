@@ -43,7 +43,13 @@ else:
     COMPUTER_NAME = "COMPUTER"
 
 
+# Functions #
 def get_load() -> int:
+    """
+    < load percentage (int)
+    - uses 'wmic' to get the current CPU load
+    - expects an empty response
+    """
     load = subprocess.check_output("wmic cpu get loadpercentage", shell=True)
     try:
         load = int(load.split()[1])
@@ -56,6 +62,14 @@ def get_load() -> int:
 
 
 def show_load():
+    """
+    - should be run with every main loop
+    - checks current CPU load
+    - depending on the load:
+        - too high - ends and returns True to main loop
+        - else - repeats itself until it ran
+                 as many times as needed in IDLE_TIME
+    """
     _idle_time = 0
     with alive_bar(IDLE_TIME) as bar:
         while _idle_time < IDLE_TIME:
