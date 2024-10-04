@@ -29,18 +29,18 @@ For more details refer to the LICENSE file in the GitHub repository.""")
 print("\n" * 3)
 
 
-LOADED = True
+# Constants #
+LOADED = True  # True meaning too much load
 
 IDLE_TIME = 6
 IDLE_LOAD = 20
+IDLE_TRIES = 4
 
 COMPUTER_NAME = platform.node()
 if COMPUTER_NAME != "":
     COMPUTER_NAME = "'" + COMPUTER_NAME.upper() + "'"
 else:
     COMPUTER_NAME = "COMPUTER"
-
-print(COMPUTER_NAME + " STARTUP IN PROGRESS...")
 
 
 def get_load() -> int:
@@ -70,7 +70,17 @@ def show_load():
         return False
 
 
-while LOADED:
-    LOADED = show_load()
+# Main Loop #
+print(COMPUTER_NAME + " STARTUP IN PROGRESS...")
 
-input("\n\nStartup complete!\nPress ENTER to exit...")
+_iteration = 0
+
+while LOADED and _iteration < IDLE_TRIES:
+    LOADED = show_load()
+    if LOADED:
+        _iteration += 1
+
+if _iteration >= IDLE_TRIES:
+    input("\n\nMaximum tries exceeded!\nPress ENTER to exit...")
+else:
+    input("\n\nStartup complete!\nPress ENTER to exit...")
