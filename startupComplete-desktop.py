@@ -1,6 +1,6 @@
 # Startup Complete: Simple command line tool to let you know
 #                   when your PC's ready to go.
-# Copyright (C) 2023  Foxie EdianiaK a.k.a. F_TEK
+# Copyright (C) 2023 - 2024  Foxie EdianiaK a.k.a. F_TEK
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,11 +19,14 @@ import subprocess
 import platform
 from alive_progress import alive_bar
 
-print("""Startup Complete  Copyright (C) 2023  Foxie EdianiaK a.k.a. F_TEK
+
+# GPLv3 Notice #
+print("""Startup Complete  Copyright (C) 2023 - 2024  Foxie EdianiaK a.k.a. F_TEK
 This program comes with ABSOLUTELY NO WARRANTY. This is free software,
 and you are welcome to redistribute it under certain conditions.
-For more details refer to the LICENSE file in the GitHub repository."""
-      + "\n" * 4)
+For more details refer to the LICENSE file in the GitHub repository.""")
+
+print("\n" * 3)
 
 
 LOADED = True
